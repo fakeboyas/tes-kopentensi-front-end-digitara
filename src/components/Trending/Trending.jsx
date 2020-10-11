@@ -6,8 +6,28 @@ import styled from "styled-components";
 function Trending() {
   const Div = styled.div`
     :hover {
-      .item{
-
+      .item {
+        -webkit-animation: mover 0.8s infinite alternate;
+        animation: mover 0.8s infinite alternate;
+      }
+      @-webkit-keyframes mover {
+        0% {
+          transform:scaleX(-1) translateX(-30px) translateY(0);
+          transition : 0.7s;
+        }
+        100% {
+          transform: scaleX(-1) translateX(-30px) translateY(-20px);
+        }
+        
+      }
+      @keyframes mover {
+        0% {
+          transform: scaleX(-1) translateX(-30px) translateY(0);
+          transition : 0.7s;
+        }
+        100% {
+          transform: scaleX(-1) translateX(-30px) translateY(-20px);
+        }
       }
       .price {
         background: #ecc214;
@@ -15,16 +35,16 @@ function Trending() {
         .amount-price {
           color: black !important;
         }
-        .text-price{
-          display : none;
+        .text-price {
+          display: none;
         }
-        .open{
-          display : contents !important;
+        .open {
+          display: contents !important;
         }
       }
 
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
     }
   `;
 
@@ -57,7 +77,9 @@ function Trending() {
               >
                 <div>
                   <span className="text-price">PRICE</span>{" "}
-                  <span className="open" style={{display : "none"}}>OPEN </span>
+                  <span className="open" style={{ display: "none" }}>
+                    OPEN{" "}
+                  </span>
                   <span
                     className="amount-price"
                     style={{ color: "#ecc214", fontWeight: "bolder" }}
@@ -65,7 +87,6 @@ function Trending() {
                     ${data.price} USD
                   </span>
                 </div>
-                
               </div>
             </Div>
           );
