@@ -15,6 +15,15 @@ function RecentItem() {
     slidesToShow: 8,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        setting: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const background = [bg_recent1, bg_recent2, bg_recent3];
@@ -30,9 +39,9 @@ function RecentItem() {
               <div>
                 <div
                   style={{
-                    backgroundImage: `url(${background[Math.floor(
-                      Math.random() * background.length
-                    )]})`,
+                    backgroundImage: `url(${
+                      background[Math.floor(Math.random() * background.length)]
+                    })`,
                   }}
                   className="d-flex align-items-center justify-content-center"
                 >

@@ -9,9 +9,11 @@
     "bootstrap": "^4.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-flagkit": "^2.0.4",
     "react-scripts": "3.4.3",
     "react-slick": "^0.27.11",
     "react-stars": "^2.2.5",
+    "react-world-flags": "^1.4.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.0"
   },

@@ -4,7 +4,18 @@ import bg_trending from "./../../assets/images/background/bg-trending.png";
 import styled from "styled-components";
 
 function Trending() {
+  const Wrapper = styled.div`
+    @media only screen and (max-width: 576px) {
+      .content {
+        flex-direction: column !important;
+      }
+    }
+  `;
   const Div = styled.div`
+    width: 20%;
+    @media only screen and (max-width: 576px){
+      width : 90%;
+    }
     :hover {
       .item {
         -webkit-animation: mover 0.8s infinite alternate;
@@ -12,18 +23,17 @@ function Trending() {
       }
       @-webkit-keyframes mover {
         0% {
-          transform:scaleX(-1) translateX(-30px) translateY(0);
-          transition : 0.7s;
+          transform: scaleX(-1) translateX(-30px) translateY(0);
+          transition: 0.7s;
         }
         100% {
           transform: scaleX(-1) translateX(-30px) translateY(-20px);
         }
-        
       }
       @keyframes mover {
         0% {
           transform: scaleX(-1) translateX(-30px) translateY(0);
-          transition : 0.7s;
+          transition: 0.7s;
         }
         100% {
           transform: scaleX(-1) translateX(-30px) translateY(-20px);
@@ -49,22 +59,18 @@ function Trending() {
   `;
 
   return (
-    <div className="pt-3  text-light">
+    <Wrapper className="pt-3  text-light">
       <h3 className="text-light"> TRENDING CASES</h3>
       <div
         style={{
           backgroundImage: `url(${bg_trending})`,
-          height: "300px",
           backgroundSize: "cover",
         }}
-        className="d-flex pb-5 flex-row justify-content-between align-items-center"
+        className="content d-flex pb-5 flex-row justify-content-between align-items-center"
       >
         {trending.map((data) => {
           return (
-            <Div
-              className="text-light d-flex flex-column align-items-center"
-              style={{ width: "20%", height: " 200px" }}
-            >
+            <Div className="text-light d-flex flex-column align-items-center">
               <div style={{ backgroundImage: `url(${data.bg})` }}>
                 <img className="item" src={data.image} alt="" />
               </div>
@@ -92,7 +98,7 @@ function Trending() {
           );
         })}
       </div>
-    </div>
+    </Wrapper>
   );
 }
 

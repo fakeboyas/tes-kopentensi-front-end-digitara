@@ -1,23 +1,33 @@
 import React from "react";
 import social from "./../../data/social.json";
+import styled from "styled-components";
 
 function SocialMedia() {
+  const Wrapper = styled.div`
+    @media only screen and (max-width: 576px) {
+      .social-media {
+        display: none !important;
+      }
+    }
+  `;
   return (
-    <div className="d-flex flex-row w-50 align-items-center justify-content-center">
-      <div className="w-25">
-        <span>Join us : </span>
+    <Wrapper className="w-50">
+      <div className="social-media d-flex flex-row align-items-center justify-content-center">
+        <div className="align-items-end">
+          <span>Join us : </span>
+        </div>
+        <div className="d-flex flex-row w-50">
+          {" "}
+          {social.map((data) => {
+            return (
+              <a className="ml-4" href={data.url}>
+                <img src={data.icon} />
+              </a>
+            );
+          })}
+        </div>
       </div>
-      <div className="d-flex flex-row w-50">
-        {" "}
-        {social.map((data) => {
-          return (
-            <a className="ml-2" href={data.url}>
-              <img src={data.icon} />
-            </a>
-          );
-        })}
-      </div>
-    </div>
+    </Wrapper>
   );
 }
 
