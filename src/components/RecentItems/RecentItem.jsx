@@ -18,7 +18,7 @@ function RecentItem() {
     responsive: [
       {
         breakpoint: 480,
-        setting: {
+        settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },

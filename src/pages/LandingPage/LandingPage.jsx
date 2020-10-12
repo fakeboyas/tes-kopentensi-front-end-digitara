@@ -11,10 +11,10 @@ function LandingPage() {
   return (
     <div className="d-flex justify-content-center">
       <div style={{ width: "90%" }}>
-        {/* <Header /> */}
-        {/* <RecentItem /> */}
-        {/* <Trending /> */}
-        {/* <About /> */}
+        <Header />
+        <RecentItem />
+        <Trending />
+        <About />
         <PreFooter />
         <Footer />
       </div>
