@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 function Trending() {
   const Wrapper = styled.div`
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 768px) {
       .content {
         flex-direction: column !important;
       }
@@ -13,7 +13,7 @@ function Trending() {
   `;
   const Div = styled.div`
     width: 20%;
-    @media only screen and (max-width: 576px){
+    @media only screen and (max-width: 768px){
       width : 90%;
     }
     :hover {

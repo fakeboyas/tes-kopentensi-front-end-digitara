@@ -22,6 +22,23 @@ function RecentItem() {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
+        
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+        
+      },
+      {
+        breakpoint: 1028,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+        },
+        
       },
     ],
   };

@@ -5,6 +5,9 @@ function MenuFooter() {
   const Wrapper = styled.div`
   @media only screen and (max-width: 576px){
     align-self : start;
+    flex-direction : column !important ;
+    justify-content : space-between !important;
+    width : 100% !important;
   }
   
   `
