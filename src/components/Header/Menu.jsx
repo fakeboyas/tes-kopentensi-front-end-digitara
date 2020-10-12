@@ -4,11 +4,15 @@ import styled from "styled-components";
 
 function Menu() {
   const Wrapper = styled.div`
-    @media only screen and (max-width: 576px) {
-      .menu {
-        flex-direction: column !important;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column !important;
+      display : none !important;
+      .menu{
+        width : 100% !important;
       }
+    
     }
+
   `;
 
   const Button = styled.button`
@@ -26,11 +30,10 @@ function Menu() {
     }
   `;
   return (
-    <div className="menu d-flex flex-row justify-content-end mr-2 w-75">
+    <Wrapper className="d-flex flex-row justify-content-end mr-2 w-75">
       {menu.map((data) => {
         return (
-          <Button className="btn d-flex flex-column align-items-center">
-            
+          <Button className="menu btn d-flex flex-column align-items-center">
             <img
               className="align-content-center m-2"
               style={{ width: "40px" }}
@@ -41,7 +44,7 @@ function Menu() {
           </Button>
         );
       })}
-    </div>
+    </Wrapper>
   );
 }
 

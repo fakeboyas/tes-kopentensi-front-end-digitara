@@ -9,9 +9,13 @@ import styled from "styled-components";
 
 function Header() {
   const Wrapper = styled.div`
-  @media only screen and (max-width: 576px){
+  @media only screen and (max-width: 768px){
     .header{
       flex-direction : row !important;
+
+      .status{
+        display : none !important;
+      }
       .logo{
         width : 80% !important;
         img{
@@ -44,7 +48,7 @@ function Header() {
             <SignIn />
           </div>
         </div>
-        <div>
+        <div className="status">
           <TotalStatus />
         </div>
       </div>
