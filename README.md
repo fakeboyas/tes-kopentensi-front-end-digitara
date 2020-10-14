@@ -2,8 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Requirment
-# yarn
-# npm
+1. yarn
+2. npm
+3. node
 
 
 ## Usage
