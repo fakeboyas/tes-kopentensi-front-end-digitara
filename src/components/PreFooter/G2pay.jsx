@@ -5,12 +5,9 @@ import styled from "styled-components";
 function G2pay() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 480px) {
-
     }
 
     @media only screen and (max-width: 768px) {
-      
-        
     }
 
     @media only screen and (max-width: 1200px) {
@@ -20,7 +17,8 @@ function G2pay() {
   `;
   return (
     <Wrapper>
-      <a href="">
+      {/* eslint-disable-next-line */}
+      <a>
         <img src={g2pay} alt="" />
       </a>
     </Wrapper>

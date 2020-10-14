@@ -23,8 +23,8 @@ function Header() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 600px) {
       .header {
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position : center !important;
         .container-1 {
           margin: auto !important;
           width: 100% !important;

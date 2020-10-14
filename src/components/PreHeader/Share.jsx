@@ -21,10 +21,10 @@ function Share() {
     <Wrapper className="share d-flex flex-row w-25 justify-content-end align-items-end">
       <div>
         <button className="share btn btn-primary btn-sm">
-          <img src={facebook} style={{ width: "15px" }} /> Share
+          <img src={facebook} alt="" style={{ width: "15px" }} /> Share
         </button>
         <button className="share btn btn-sm btn-info ml-2 mr-4">
-          <img src={twitter} style={{ width: "15px" }} /> Share
+          <img src={twitter} alt="" style={{ width: "15px" }} /> Share
         </button>
       </div>
     </Wrapper>

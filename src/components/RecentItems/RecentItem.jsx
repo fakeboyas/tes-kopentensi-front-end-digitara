@@ -74,7 +74,7 @@ function RecentItem() {
         <Slider {...settings}>
           {recent.map((data) => {
             return (
-              <div>
+              <div key={data.name}>
                 <div
                   style={{
                     backgroundImage: `url(${
@@ -84,7 +84,6 @@ function RecentItem() {
                   className="d-flex align-items-center justify-content-center"
                 >
                   <img
-                    classname="item"
                     style={{ margin: "auto"}}
                     src={data.image}
                   

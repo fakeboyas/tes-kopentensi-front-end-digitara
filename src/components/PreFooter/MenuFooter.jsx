@@ -19,7 +19,7 @@ function MenuFooter() {
     }
   `;
   return (
-    <Wrapper className="menu-footer text-light font-weight-bold d-flex flex-row justify-content-between w-50 mt-2">
+    <Wrapper className="menu-footer text-light p-1 font-weight-bold d-flex flex-row justify-content-between w-50 mt-2">
       <p>FAQ</p>
       <p>CONTACT</p>
       <p>ITEMS</p>

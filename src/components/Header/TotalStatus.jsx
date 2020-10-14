@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function TotalStatus() {
   const Wrapper = styled.div`
-    width: 90% !important;
+    width: 100% !important;
     background-color: rgba(26, 28, 36, 0.8);
     padding: 10px;
     border-top-left-radius: 8px;

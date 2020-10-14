@@ -64,10 +64,10 @@ function Trending() {
     }
 
     @media only screen and (max-width: 768px) {
-      width: 50% !important;
+      width: 47% !important;
       .parent-item,
       .price {
-        width: 75%;
+        width: 75% !important;
         background-size: cover;
         font-size: 16px !important;
         
@@ -93,12 +93,13 @@ function Trending() {
         style={{
           backgroundImage: `url(${bg_trending})`,
           backgroundSize: "cover",
+          backgroundPosition : "center"
         }}
-        className="content d-flex pb-5 flex-wrap flex-row align-items-center"
+        className="content d-flex pb-5 flex-wrap flex-row align-items-center justify-content-center"
       >
         {trending.map((data) => {
           return (
-            <Div className="text-light d-flex flex-column align-items-center">
+            <Div key ={data.name} className="text-light d-flex flex-column align-items-center">
               <div
                 className="parent-item"
                 style={{ backgroundImage: `url(${data.bg})` }}

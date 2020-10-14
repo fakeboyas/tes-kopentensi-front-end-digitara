@@ -22,7 +22,7 @@ function SocialMedia() {
       {social.map((data) => {
         return (
           <a key={data.url} className="ml-2 mt-2" href={data.url}>
-            <img src={data.icon} />
+            <img src={data.icon} alt="" />
           </a>
         );
       })}

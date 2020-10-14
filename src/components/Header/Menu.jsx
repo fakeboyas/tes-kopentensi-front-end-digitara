@@ -52,6 +52,7 @@ function Menu(props) {
               className="align-content-center m-2"
               style={{ width: "40px" }}
               src={data.icon}
+              alt=""
             />
 
             <span style={{fontSize : "10px"}} className="text-light font-weight-bold">{data.menu}</span>

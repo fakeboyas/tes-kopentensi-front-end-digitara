@@ -1,5 +1,4 @@
 import React from "react";
-import PreHeader from "../../components/PreHeader/PreHeader";
 import Header from "../../components/Header/Header";
 import RecentItem from "../../components/RecentItems/RecentItem";
 import Trending from "../../components/Trending/Trending";

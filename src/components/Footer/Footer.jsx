@@ -6,13 +6,14 @@ import styled from "styled-components";
 
 function Footer() {
   const Wrapper = styled.div`
+  padding-top : 10px !important;
     margin-bottom: 30px;
     background-color: #1c1e26;
     @media only screen and (max-width: 480px) {
       flex-direction: column !important;
       .container-1 {
         width: 100% !important;
-        padding: 0px !important;
+        padding : 10px !important;
       }
       .container-2 {
         width: 100% !important;
@@ -26,7 +27,9 @@ function Footer() {
     @media only screen and (max-width: 768px) {
       
       .container-1{
-        width : 100% !important;
+        width : 90% !important;
+        margin : auto !important;
+        margin-top : 10px !important;
       }
       .container-2{
         display: none !important;
