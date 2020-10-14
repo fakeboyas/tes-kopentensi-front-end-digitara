@@ -109,7 +109,7 @@ function Header() {
               >
                 <i
                   style={{ color: "white" }}
-                  className="fa fa-bars fa-lg"
+                  className="fa fa-bars fa-2x"
                   aria-hidden="true"
                 ></i>
               </div>
@@ -120,7 +120,7 @@ function Header() {
               >
                 <i
                   style={{ color: "white" }}
-                  className="fa fa-times fa-lg"
+                  className="fa fa-times fa-2x"
                   aria-hidden="true"
                 ></i>
               </div>
