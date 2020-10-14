@@ -21,7 +21,7 @@ function Header() {
   };
 
   const Wrapper = styled.div`
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 700px) {
       .header {
         background-size: cover !important;
         background-position : center !important;
