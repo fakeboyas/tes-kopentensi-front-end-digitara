@@ -3,13 +3,27 @@ import steam from "../../assets/images/icons/socialmedia/steam.png";
 import styled from "styled-components";
 
 function SignIn() {
-
   const Wrapper = styled.div`
-  @media only screen and (max-width: 768px){
-    display : none !important;
+    @media only screen and (max-width: 480px) {
+      order: 1 !important ;
+      width: 70% !important;
+      padding: 0px !important;
+      margin-top : 15px !important;
+      margin-bottom : 15px !important;
+      Button {
+        width: 100% !important;
+      }
+    }
 
-  }  
-  `
+    @media only screen and (max-width: 768px) {
+      Button {
+        font-size: 10px !important;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+    }
+  `;
 
   const Button = styled.button`
     background: #7ba635;
@@ -24,7 +38,7 @@ function SignIn() {
     }
   `;
   return (
-    <Wrapper>
+    <Wrapper className="d-flex">
       <Button className="btn d-flex flex-column align-items-center justify-content-center">
         <img src={steam} alt="logo" style={{ width: "40px" }} />
         <span className="text-light font-weight-bold mt-1">

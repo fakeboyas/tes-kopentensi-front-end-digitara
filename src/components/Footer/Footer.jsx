@@ -6,32 +6,45 @@ import styled from "styled-components";
 
 function Footer() {
   const Wrapper = styled.div`
-    margin-bottom : 30px;
+    margin-bottom: 30px;
     background-color: #1c1e26;
-    @media only screen and (max-width: 576px) {
-      flex-direction : column !important;
-      .container-1{
-        width : 100% !important;
-        padding : 0px !important;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column !important;
+      .container-1 {
+        width: 100% !important;
+        padding: 0px !important;
       }
-      .container-2{
-        width : 100% !important;
-        img{
-          width : 100% !important;
+      .container-2 {
+        width: 100% !important;
+        img {
+          width: 100% !important;
         }
       }
-      .container-3{
-        display : none !important;
-      }
       
+    }
+
+    @media only screen and (max-width: 768px) {
+      
+      .container-1{
+        width : 100% !important;
+      }
+      .container-2{
+        display: none !important;
+      }
+
+      .container-3 {
+        display: none !important;
+      }
+
      
+    }
+
+    @media only screen and (max-width: 1200px) {
     }
   `;
 
   return (
-    <Wrapper
-      className="d-flex flex-row align-items-center"
-    >
+    <Wrapper className="d-flex flex-row flex-wrap align-items-center">
       <div className="container-1 w-25 mt-4 d-flex flex-column pl-5">
         <p className="text-light font-weight-bold">© 2016—2020 FARMSKINS.COM</p>
         <p className="text-light" style={{ fontSize: "12px" }}>

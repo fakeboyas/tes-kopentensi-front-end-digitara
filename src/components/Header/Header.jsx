@@ -6,59 +6,135 @@ import SignIn from "./SignIn";
 import TotalStatus from "./TotalStatus";
 import PreHeader from "./../PreHeader/PreHeader";
 import styled from "styled-components";
-import Hamburger from "hamburger-react";
 
 function Header() {
-  const Wrapper = styled.div`
-    @media only screen and (max-width: 768px) {
-      .header {
-        flex-direction: row !important;
+  const [toggle, setToggle] = useState({ open: "flex", close: "none" });
 
+  const handleToggleOpen = (e) => {
+    e.preventDefault();
+    setToggle({ open: "none", close: "flex" });
+  };
+
+  const handleToggleClose = (e) => {
+    e.preventDefault();
+    setToggle({ open: "flex", close: "none" });
+  };
+
+  const Wrapper = styled.div`
+    @media only screen and (max-width: 480px) {
+      .header {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        .container-1 {
+          margin: auto !important;
+          width: 100% !important;
+          .logo {
+            display: flex !important;
+            flex-direction: row !important;
+            width: 100% !important;
+            .toggle {
+              padding: 0px !important;
+              align-items: center !important;
+              display: flex !important;
+              flex-direction: row !important;
+              justify-content: flex-end !important;
+            }
+
+            .icon {
+              width: 50% !important;
+              margin-top: 5px !important;
+              img {
+                width: 80% !important;
+              }
+            }
+          }
+
+          .menu {
+            flex-direction: column !important;
+          }
+        }
         .status {
           display: none !important;
         }
-        .logo {
-          width: 80% !important;
-          img {
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .header {
+        .container-1 {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          .menu {
+            width: 90% !important;
+            justify-content: center !important;
+            align-items: center !important;
+          }
+          .logo {
+            margin: auto !important;
             width: 100% !important;
+            img {
+              width: 40% !important;
+            }
           }
         }
       }
     }
+
+    @media only screen and (max-width: 1200px) {
+    }
   `;
-  const [isOpen, setOpen] = useState(false);
+
   return (
     <Wrapper>
       <div
-        className="header d-flex flex-column"
+        className="header d-flex flex-column flex-wrap"
         style={{
           backgroundImage: `url(${bg_header})`,
           backgroundSize: "cover",
         }}
       >
         <PreHeader />
-        <div className="d-flex flex-row align-items-center">
+        <div className="container-1 d-flex flex-row  flex-wrap align-items-center">
           <div className="logo" style={{ width: "30%" }}>
-            <img style={{ width: "70%" }} src={logo} alt="" />
-          </div>
-
-          <a class="hamburger-icon" data-hamburger-action="open">
-            <div class="hamburger-icon-lines">
-              <div class="hamburger-icon-line"></div>
-              <div class="hamburger-icon-line"></div>
-              <div class="hamburger-icon-line"></div>
+            <div className="icon">
+              <img style={{ width: "70%" }} src={logo} alt="" />
             </div>
-          </a>
+            <div className="toggle" style={{ display: "none", width: "40%" }}>
+              <div
+                onClick={handleToggleOpen}
+                className="btn"
+                style={{ display: `${toggle.open}` }}
+              >
+                <i
+                  style={{ color: "white" }}
+                  className="fa fa-bars fa-lg"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div
+                onClick={handleToggleClose}
+                className="btn"
+                style={{ display: `${toggle.close}` }}
+              >
+                <i
+                  style={{ color: "white" }}
+                  className="fa fa-times fa-lg"
+                  aria-hidden="true"
+                ></i>
+              </div>
+            </div>
+          </div>
 
           <div
             style={{ width: "70%" }}
-            className="d-flex flex-row align-items-center"
+            className="menu d-flex flex-row align-items-center"
           >
-            <Menu />
+            <Menu close={toggle.close} />
             <SignIn />
           </div>
         </div>
-        <div className="status">
+        <div className="status d-flex flex-row justify-content-center">
           <TotalStatus />
         </div>
       </div>

@@ -1,9 +1,25 @@
 import React from "react";
 import Flag from "react-flagkit";
+import styled from 'styled-components'
 
 function Language() {
+  const Wrapper = styled.div`
+  @media only screen and (max-width: 480px){
+
+  }
+
+@media only screen and (max-width: 768px){
+  
+}
+
+@media only screen and (max-width: 1200px){
+  order : 2 !important;
+  margin-bottom: 10px !important;
+}
+`
+
   return (
-    <div class="dropdown">
+    <Wrapper class="dropdown">
       <button
         class="btn btn-sm text-light dropdown-toggle"
         type="button"
@@ -45,7 +61,7 @@ function Language() {
           <Flag country="TR" />
         </a>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 

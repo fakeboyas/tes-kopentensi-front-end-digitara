@@ -7,15 +7,13 @@ function Trending() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 768px) {
       .content {
-        flex-direction: column !important;
+        flex-direction: row !important;
       }
     }
   `;
   const Div = styled.div`
     width: 20%;
-    @media only screen and (max-width: 768px){
-      width : 90%;
-    }
+
     :hover {
       .item {
         -webkit-animation: mover 0.8s infinite alternate;
@@ -56,6 +54,32 @@ function Trending() {
       -webkit-transform: scale(1.2);
       transform: scale(1.2);
     }
+
+    @media only screen and (max-width: 1201px) {
+      background-size: cover !important;
+      width: 33% !important;
+      align-items : center !important;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: 50% !important;
+      .parent-item,
+      .price {
+        width: 75%;
+        background-size: cover;
+        font-size: 16px !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+        width: 100% !important;
+        .parent-item,
+        .price {
+          width: 75% !important;
+        }
+      }
+    }
   `;
 
   return (
@@ -66,13 +90,21 @@ function Trending() {
           backgroundImage: `url(${bg_trending})`,
           backgroundSize: "cover",
         }}
-        className="content d-flex pb-5 flex-row justify-content-between align-items-center"
+        className="content d-flex pb-5 flex-wrap flex-row align-items-center"
       >
         {trending.map((data) => {
           return (
             <Div className="text-light d-flex flex-column align-items-center">
-              <div style={{ backgroundImage: `url(${data.bg})` }}>
-                <img className="item" src={data.image} alt="" />
+              <div
+                className="parent-item"
+                style={{ backgroundImage: `url(${data.bg})` }}
+              >
+                <img
+                  style={{ width: "100%" }}
+                  className="item"
+                  src={data.image}
+                  alt=""
+                />
               </div>
               <div>
                 <span style={{ fontSize: "12px" }}>{data.name}</span>

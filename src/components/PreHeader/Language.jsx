@@ -4,17 +4,27 @@ import styled from "styled-components";
 
 function Language() {
   const Wrapper = styled.div`
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 480px) {
+      margin-top: 20px !important;
+      padding : 5px !important;
+      align-items : center !important;
       .text {
-        display: none !important;
+        display : none;
       }
+    }
+
+    @media only screen and (max-width: 768px) {
+      width : 50% !important;
+    }
+
+    @media only screen and (max-width: 1200px) {
     }
   `;
 
   return (
-    <Wrapper className="w-25 d-flex flex-row align-items-center">
+    <Wrapper className="w-25 d-flex flex-row p-3 flex-wrap align-items-center">
       <span className="text">Choose Language :</span>
-      <div class="dropdown mt-1">
+      <div className="dropdown mt-1">
         <button
           class="btn btn-sm text-light dropdown-toggle"
           type="button"

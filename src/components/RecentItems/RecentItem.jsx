@@ -3,6 +3,7 @@ import recent from "./../../data/recent.json";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from "styled-components";
 import bg_recent1 from "../../assets/images/background/bg-recent1.png";
 import bg_recent2 from "../../assets/images/background/bg-recent2.png";
 import bg_recent3 from "../../assets/images/background/bg-recent3.png";
@@ -17,35 +18,54 @@ function RecentItem() {
     arrows: false,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
-        
       },
       {
         breakpoint: 768,
         settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
         },
-        
       },
       {
-        breakpoint: 1028,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 6,
           slidesToScroll: 1,
         },
-        
       },
     ],
   };
 
+  const Wrapper = styled.div`
+    @media only screen and (max-width: 500px) {
+      img{
+        width : 80% !important;
+        height : 80% !important;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+    }
+
+    @media only screen and (max-width: 1024px) {
+    }
+  `;
+
   const background = [bg_recent1, bg_recent2, bg_recent3];
   return (
-    <div className="d-flex flex-column pt-3 pl-3 align-items-center">
+    <Wrapper className="d-flex mb-3 flex-column pt-3 pl-3 align-items-center">
       <div>
         <h6 className="text-light font-weight-bold">RECENT ITEMS</h6>
       </div>
@@ -62,14 +82,20 @@ function RecentItem() {
                   }}
                   className="d-flex align-items-center justify-content-center"
                 >
-                  <img style={{ margin: "auto" }} src={data.image} alt="" />
+                  <img
+                    classname="item"
+                    style={{ margin: "auto"}}
+                    src={data.image}
+                  
+                    alt=""
+                  />
                 </div>
               </div>
             );
           })}
         </Slider>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 

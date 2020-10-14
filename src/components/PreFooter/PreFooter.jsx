@@ -2,34 +2,29 @@ import React from "react";
 import MenuFooter from "./MenuFooter";
 import SocialMedia from "./SocialMedia";
 import Language from "./Language";
-import g2pay from "./../../assets/images/icons/others/g2pay.png";
-import styled from 'styled-components'
+import G2pay from "./G2pay";
+
+import styled from "styled-components";
 
 function PreFooter() {
-
   const Wrapper = styled.div`
-  background-color : #20222b;
-  height : 70px;
-  @media only screen and (max-width: 576px) {
-      flex-direction : column !important;
-      height : auto !important;
+    background-color: #20222b;
+
+    @media only screen and (max-width: 480px) {
+      flex-direction: column !important;
+      height: auto !important;
+    }
+    @media only screen and (max-width: 768px) {
+      justify-content : space-evenly !important;
     }
   `;
-  
+
   return (
-    <Wrapper
-      
-      className="pre-footer d-flex flex-row justify-content-center align-items-center"
-    >
+    <Wrapper className="pre-footer m-2 d-flex flex-row flex-wrap justify-content-center align-items-center">
       <SocialMedia />
       <MenuFooter />
-
-      <div className="w-25 d-flex flex-row ml-3 mt-2 justify-content-around">
-        <Language />
-        <a href="">
-          <img src={g2pay} alt="" />
-        </a>
-      </div>
+      <Language />
+      <G2pay />
     </Wrapper>
   );
 }

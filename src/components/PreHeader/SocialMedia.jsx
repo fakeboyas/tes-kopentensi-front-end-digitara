@@ -4,15 +4,19 @@ import styled from "styled-components";
 
 function SocialMedia() {
   const Wrapper = styled.div`
-    @media only screen and (max-width: 576px) {
-      .social-media {
-        display: none !important;
-      }
+    @media only screen and (max-width: 480px) {
+      display : none !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+    display : none !important;
+    }
+
+    @media only screen and (max-width: 1024px) {
     }
   `;
   return (
-    <Wrapper className="w-50">
-      <div className="social-media d-flex flex-row align-items-center justify-content-center">
+    <Wrapper className="w-50 social-media d-flex flex-row align-items-center justify-content-center">
         <div className="align-items-end">
           <span>Join us : </span>
         </div>
@@ -26,7 +30,6 @@ function SocialMedia() {
             );
           })}
         </div>
-      </div>
     </Wrapper>
   );
 }
