@@ -6,9 +6,10 @@ function SignIn() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 700px) {
       order: 1 !important ;
-      width: 70% !important;
+      width: 75% !important;
       padding: 0px !important;
-      margin-top : 15px !important;
+      margin-top : 10px !important;
+      margin-bottom : 10px !important;
       Button {
         width: 100% !important;
       }

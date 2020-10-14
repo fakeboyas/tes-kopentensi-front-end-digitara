@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function Menu(props) {
   const toggle = props.close;
-  console.log(toggle);
+  
   const Wrapper = styled.div`
     @media only screen and (max-width: 700px) {
       flex-direction: column !important;
