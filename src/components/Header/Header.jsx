@@ -63,12 +63,12 @@ function Header() {
       .header {
         .container-1 {
           display: flex !important;
-          flex-direction: column !important;
           align-items: center !important;
           .menu {
-            width: 90% !important;
+            width : 90% !important;
             justify-content: center !important;
             align-items: center !important;
+            margin: auto !important;
           }
           .logo {
             margin: auto !important;
