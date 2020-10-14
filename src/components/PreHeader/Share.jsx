@@ -10,10 +10,11 @@ function Share() {
     }
 
     @media only screen and (max-width: 768px) {
-      width : 50% !important;
+      
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1024px) {
+      width : 50% !important;
     }
   `;
   return (

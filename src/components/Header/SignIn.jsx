@@ -4,12 +4,11 @@ import styled from "styled-components";
 
 function SignIn() {
   const Wrapper = styled.div`
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       order: 1 !important ;
       width: 70% !important;
       padding: 0px !important;
       margin-top : 15px !important;
-      margin-bottom : 15px !important;
       Button {
         width: 100% !important;
       }

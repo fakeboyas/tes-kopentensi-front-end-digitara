@@ -7,7 +7,7 @@ function Trending() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 768px) {
       .content {
-        flex-direction: row !important;
+        background-size : contain, cover;
       }
     }
   `;
@@ -70,13 +70,17 @@ function Trending() {
         width: 75%;
         background-size: cover;
         font-size: 16px !important;
+        
       }
 
       @media only screen and (max-width: 600px) {
-        width: 100% !important;
+        width: 80% !important;
+        margin : auto !important;
         .parent-item,
         .price {
           width: 75% !important;
+          margin-top : 15px !important;
+          margin-bottom : 15px !important;
         }
       }
     }

@@ -6,7 +6,7 @@ function Menu(props) {
   const toggle = props.close;
   console.log(toggle)
   const Wrapper = styled.div`
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       flex-direction: column !important;
       align-items: center !important;
       order: 2 !important;
@@ -19,12 +19,13 @@ function Menu(props) {
     }
 
     @media only screen and (max-width: 768px) {
-      Button {
-        font-size: 10px !important;
-      }
+     
     }
 
     @media only screen and (max-width: 1200px) {
+      Button {
+        font-size: 10px !important;
+      }
     }
   `;
 
@@ -46,14 +47,14 @@ function Menu(props) {
     <Wrapper className="d-flex flex-row justify-content-end mr-2 w-75">
       {menu.map((data) => {
         return (
-          <Button key={data.menu} className="menu btn d-flex flex-column align-items-center">
+          <Button key={data.menu} className="menu btn d-flex flex-wrap flex-column align-items-center justify-content-between">
             <img
               className="align-content-center m-2"
               style={{ width: "40px" }}
               src={data.icon}
             />
 
-            <span className="text-light font-weight-bold">{data.menu}</span>
+            <span style={{fontSize : "10px"}} className="text-light font-weight-bold">{data.menu}</span>
           </Button>
         );
       })}

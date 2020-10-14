@@ -50,6 +50,7 @@ function RecentItem() {
 
   const Wrapper = styled.div`
     @media only screen and (max-width: 500px) {
+      padding : 0px !important;
       img{
         width : 80% !important;
         height : 80% !important;

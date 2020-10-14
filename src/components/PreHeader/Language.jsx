@@ -6,18 +6,18 @@ function Language() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 480px) {
       margin-top: 20px !important;
-      padding : 5px !important;
-      align-items : center !important;
+      padding: 5px !important;
+      align-items: center !important;
       .text {
-        display : none;
+        display: none;
       }
     }
 
     @media only screen and (max-width: 768px) {
-      width : 50% !important;
     }
 
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1024px) {
+      width: 50% !important;
     }
   `;
 

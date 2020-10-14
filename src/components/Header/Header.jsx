@@ -21,7 +21,7 @@ function Header() {
   };
 
   const Wrapper = styled.div`
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       .header {
         background-size: contain !important;
         background-repeat: no-repeat !important;
@@ -60,6 +60,10 @@ function Header() {
     }
 
     @media only screen and (max-width: 768px) {
+     
+    }
+
+    @media only screen and (max-width: 1024px) {
       .header {
         .container-1 {
           display: flex !important;
@@ -79,9 +83,6 @@ function Header() {
           }
         }
       }
-    }
-
-    @media only screen and (max-width: 1200px) {
     }
   `;
 
@@ -134,7 +135,7 @@ function Header() {
             <SignIn />
           </div>
         </div>
-        <div className="status d-flex flex-row justify-content-center">
+        <div className="d-flex flex-row justify-content-center">
           <TotalStatus />
         </div>
       </div>

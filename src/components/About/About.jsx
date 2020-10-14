@@ -7,8 +7,22 @@ import styled from "styled-components";
 function About() {
   const Wrapper = styled.div`
     @media only screen and (max-width: 480px) {
+      .title {
+        font-size: 24px !important;
+      }
+
+      .text-follow {
+        font-size: 14px !important;
+      }
       .text-g2pay {
         display: none !important;
+      }
+
+      .signin{
+        width : 70% !important;
+        span{
+          font-size : 14px !important;
+        }
       }
     }
 
@@ -31,7 +45,7 @@ function About() {
       className="d-flex flex-column align-items-center"
     >
       <h1
-        className="mt-5 font-weight-bolder"
+        className="title mt-5 font-weight-bolder"
         style={{
           color: "#ecc214",
         }}

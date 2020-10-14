@@ -9,10 +9,11 @@ function SocialMedia() {
     }
 
     @media only screen and (max-width: 768px) {
-    display : none !important;
+    
     }
 
     @media only screen and (max-width: 1024px) {
+      display : none !important;
     }
   `;
   return (
